@@ -54,17 +54,19 @@ Merge Types:
 2. Automatic Merge
 3. Manual Merge - we manually solve conflits if git is unable to solve them automaticlly.
 
-- `git branch` - displays current branch.
+- `git branch` - displays list of local branches
   
-- `git branch -a` - displays list of all branches
+- `git branch -a` - displays list of all branches (local & remote)
 
 - `git checkout -b NEWBRANCH` - this command will create new branch inside of your project. If you changed files before changing the branch, those changes will be transferred to the new branch.
 
-- `git checkout BRANCHNAME` - switch to another branch
+- `git checkout BRANCHNAME` - switch to another branch.
 
 - `git merge BRANCHNAME` - this will allow you to merge to branches. First go to your main branch and then use this command to merge it with your feature branch.
   
-- `git mergetool` - uses mergetool to resolve conflits
+- `git mergetool` - uses mergetool to resolve conflits.
+
+- `git branch -d BRANCHNAME` - removes branch from local repository.
 
 **Conflits**
 
@@ -125,6 +127,27 @@ When you made a mistake and you want to revert back to your previous commits you
 
 - `git push -u orgin BRANCHNAME` - use this command when you want to add branch to your remote repository.
 
+- `git fetch -p` - looks for dead branches and removes references to them. It's helpful if you deleted branches from Github website.
+
+- `git fetch` - use this when you want to update local branches list. It's useful when you create branch directly from Github website.
+
+- `git pull --all` - this command will update all branches from your remote repo.
+
+- `git push origin :BRANCHNAME` - it will delete branch from your remote repository
+
+**Changing default branch**
+
+It's usually the good idea to have one **stable** branch that is production ready and one **development branch** where you work on your code. When your development branch will reach production ready state then you merge those changes to the stable branch.
+:exclamation: Be careful which default branch you choose, because it **affetcs cloning and merging options.**
+
+
+
+
+**Rebase**
+
+- `git pull --rebase` - if you have one commit made in your local repository and one commit made remotely. You do pull after your local commit. Then order of your local commits will be **local -> remote.** When you add `--rebase` flag this order will be reversed **remote -> local.**
+
+## Tags
 
 **Creating aliases**
 
