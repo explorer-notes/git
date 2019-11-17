@@ -54,7 +54,7 @@ Merge Types:
 2. Automatic Merge
 3. Manual Merge - we manually solve conflits if git is unable to solve them automaticlly.
 
-- `git branch` - displays current branch
+- `git branch` - displays current branch.
   
 - `git branch -a` - displays list of all branches
 
@@ -123,6 +123,7 @@ When you made a mistake and you want to revert back to your previous commits you
 
 **Local branches workflow**
 
+- `git push -u orgin BRANCHNAME` - use this command when you want to add branch to your remote repository.
 
 
 **Creating aliases**
