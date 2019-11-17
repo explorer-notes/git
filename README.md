@@ -72,19 +72,6 @@ Merge Types:
 
 To create a conflit inside a git repository (at least that's how I understand this) you need to have to copies of the same file. Inside those files there will be two different texts. Git doesn't know which copy of the file you want to keep. So he will ask you about that.
 
-**Tagging**
-
-Tags are just labels you can add to your important commit points.
-
-- `git tag TAGNAME` -adds tag to your current commit
-  
-- `git tag --list` - displays list of all tags
-
-- `git tag -d TAGNAME` - use this if you want to delete tag
-
-- `git tag -a VERSION -m "MESSAGE"` - letter `a` signals that it's annotated tag. With this tag we also add a message that relates to it. It's is useful to use this tag when you want to mark important moments in your project called **milestones.**
-
-- `git show TAGNAME` - use this command if you want to see commit message that was attached to the annotated flag.
 
 **Stashing**
 Stashing is another important concept that lets you save your work in progress. It's useful when you want to switch context between branches without committing the changes that you made.
@@ -148,6 +135,35 @@ It's usually the good idea to have one **stable** branch that is production read
 - `git pull --rebase` - if you have one commit made in your local repository and one commit made remotely. You do pull after your local commit. Then order of your local commits will be **local -> remote.** When you add `--rebase` flag this order will be reversed **remote -> local.**
 
 ## Tags
+
+Tags are just labels you can add to your important commit points.
+
+- `git tag TAGNAME` -adds tag to your current commit
+  
+- `git tag --list` - displays list of all tags
+
+- `git tag -d TAGNAME` - use this if you want to delete tag.
+
+- `git push origin :TAGNAME` - this command will delete tag from your remote repository. Remember to add colon.
+
+- `git tag -a VERSION -m "MESSAGE"` - letter `a` signals that it's annotated tag. With this tag we also add a message that relates to it. It's is useful to use this tag when you want to mark important moments in your project called **milestones.**
+
+- `git tag -a TAGNAME` - use this command if you want to add annotated tag and you want to write down detailed message using your **code editor.**
+
+- `git tag -a -f <tag_identifier> <commit_id>` - use this command if you want to use existing tag and force it (`-f`) to point to different commit. This command makes tags **easy to reuse.** :exclamation::exclamation: Be careful when you use this. **If you change tags without informing other people it will create conflits.**
+
+- `git push --force origin TAGNAME` - use this command if you want to update locally edited (moved) tag to your remote repository.  
+
+- `git show TAGNAME` - use this command if you want to see **tag details.**
+- `git tag 'v.1.*'` - this command will display list of tags that start with **"v.1."**. Asteriks `*` works as a wildcard.
+
+- `git tag -l -n` - use this command if you want to display list of tags **with messages.** By default `-n` flag displays only first line. I you wish to see more than one line specify it with a flag ex. `-n4` (will display 4 lines of message).
+
+**Pushing local tags to GitHub**
+
+- `git push origin TAGNAME` - pushes a single tag to your remote repository.
+
+- `git push --tags` - pushes all tags to your remote repository :+1:
 
 **Creating aliases**
 
