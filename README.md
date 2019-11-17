@@ -70,6 +70,41 @@ Merge Types:
 
 To create a conflit inside a git repository (at least that's how I understand this) you need to have to copies of the same file. Inside those files there will be two different texts. Git doesn't know which copy of the file you want to keep. So he will ask you about that.
 
+**Tagging**
+
+Tags are just labels you can add to your important commit points.
+
+- `git tag TAGNAME` -adds tag to your current commit
+  
+- `git tag --list` - displays list of all tags
+
+- `git tag -d TAGNAME` - use this if you want to delete tag
+
+- `git tag -a VERSION -m "MESSAGE"` - letter `a` signals that it's annotated tag. With this tag we also add a message that relates to it. It's is useful to use this tag when you want to mark important moments in your project called **milestones.**
+
+- `git show TAGNAME` - use this command if you want to see commit message that was attached to the annotated flag.
+
+**Stashing**
+Stashing is another important concept that lets you save your work in progress. It's useful when you want to switch context between branches without committing the changes that you made.
+
+- `git stash` - saves changes made to the working directory.
+
+- `git stash --list` - displays list of your stashes.
+
+- `git stash pop` - this command will apply changes that were stashed in the working directory. After this command stash will be removed from stash list.
+
+**Time Travel**
+When you made a mistake and you want to revert back to your previous commits you do time travel.
+
+- `git reset HASH --soft` - soft reset is the least destructive. It will only change the commit that your HEAD is pointing. It preservs git Staging Area and your Working Directory.
+
+- `git reset HASH --mixed` - it's a default reset so you don't have to use `--mixed` flag. All changes will be made inside our Working Directory. Staging Area will be empty.
+
+- `git reset HASH --hard` - all the changes will be wipe out. Our working directory will be clean.
+
+- `git reflog` - use when you want to display every action that was made inside your repository. It's often used along with reset. **When you experimented with resets and made a mistake, this command will help you.**
+
+
 
 **Creating aliases**
 
