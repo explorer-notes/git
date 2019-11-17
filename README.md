@@ -54,13 +54,17 @@ Merge Types:
 2. Automatic Merge
 3. Manual Merge - we manually solve conflits if git is unable to solve them automaticlly.
 
-- `git branch` - display list of branches in your project.
+- `git branch` - displays current branch
+  
+- `git branch -a` - displays list of all branches
 
 - `git checkout -b NEWBRANCH` - this command will create new branch inside of your project. If you changed files before changing the branch, those changes will be transferred to the new branch.
 
 - `git checkout BRANCHNAME` - switch to another branch
 
 - `git merge BRANCHNAME` - this will allow you to merge to branches. First go to your main branch and then use this command to merge it with your feature branch.
+  
+- `git mergetool` - uses mergetool to resolve conflits
 
 **Conflits**
 
