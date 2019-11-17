@@ -104,6 +104,25 @@ When you made a mistake and you want to revert back to your previous commits you
 
 - `git reflog` - use when you want to display every action that was made inside your repository. It's often used along with reset. **When you experimented with resets and made a mistake, this command will help you.**
 
+## Remote Workflow
+
+- `git fetch` - this command fetches changes that were made inside remote repository to your local repository.
+
+- `git pull` - fetches changes and merges them at the same time.
+
+- `git push` - pushes changes made inside your local repository to remote repository. Good practice is to pull changes before you push. It only updates your **current branch.**
+
+**Information about remote repos**
+
+- `git remote -v` - displays information about your remote repositories. 
+
+- `git remote set-url orgin NEWURL` - use this if you changed your remote repository name or you want your local repository to point to another remote repository.
+
+- `git remote show origin` - displays detailed information about remote repository.
+
+
+**Local branches workflow**
+
 
 
 **Creating aliases**
