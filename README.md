@@ -169,3 +169,33 @@ Tags are just labels you can add to your important commit points.
 
 - `git config --global alias.ALIASNAME "COMMAND "` - this is pretty useful if we regularly use more complicated commands and we want to have an alternative and simpler way to do it.
 
+## Forks
+Fork means that you clone somebody else's repo to your Github Repository. Original repository is called **upstream repository.**
+If you have your personal copy of this repository, now you can start changing and improving your version of repo.
+
+**Keeping our Repository up to date with upstream repository**
+
+Do this steps in exact order:
+
+- `git remote -v` - this will display all remote versions of our repository. `orgin` will be setup automatically to out individual remote version on Github.
+
+- `git remote add upstream <repo_url>` - you don't have to name original repository upstream, but it's a convention and you should try to follow it.
+
+- `git pull upstream master` - this command will update our local repository with our upstream repository.
+
+- `git push origin master` - this command will update our remote github repository with local repository.
+
+## Issues
+
+Issues are a way in Github to keep track of bugs, planning enhancments and keeping in touch with other developers about your project. You can use it yourself for better management.
+
+Another useful feature are milestones. You can use those to plan development of your project.
+
+**Close Issue using commit**
+
+If you want to close issue while committing changes, you can use a special syntax. 
+-  `close #3` - it will close issue number three if you add this to a commit message.
+
+**Mentions**
+
+- `#3` - use pound and number of issue to reference issue in the comment.
